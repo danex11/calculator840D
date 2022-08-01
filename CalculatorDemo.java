@@ -10,9 +10,11 @@ class CalculateAlarm {
      this.alarm = alarm;
      dbbyte = 0; //= Integer.parseInt(alarm);
 
-     String chars1and2 = alarm.substring(0, 2);
+    String chars12 = alarm.substring(0, 2);
+    String chars34 = alarm.substring(2, 4);
+    String chars567 = alarm.substring(4, 7);
  
-     if (new String(chars1and2).equals("70"))
+     if (new String(chars12).equals("70"))
      {
          dbbyte = 100;
      }
@@ -27,15 +29,27 @@ class CalculateAlarm {
     return dbbyte;
  }
  
- }
  
+ 
+public void group70(String chars34, String chars567)
+{
 
+}
 
+public void group60(String chars34, String chars567)
+{
+
+}
+
+public void group50(String chars34, String chars567)
+{
+
+}
 
 
 public class CalculatorDemo{
 
-    public static void main(String[] args){
+    public void main(String[] args){
         System.out.println("Write six digit alarm no.: ");
         Scanner in = new Scanner(System.in);
         String input = in.nextLine();
@@ -60,4 +74,5 @@ public class CalculatorDemo{
     //     return byte
     // }
 
+}
 }
