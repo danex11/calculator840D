@@ -45,9 +45,13 @@ class CalculateAlarm {
         return bb;
     }
 
-    public void group60(int digs34, int digs567)
+    public String group60(int digs34loc, int digs56loc)
     {
-
+        int byte70 = 142 + (2 * digs34loc);
+        byte70 += digs56loc/8;        //truncate (to int) (i.e. drop everything after the decimal dot)
+        int bit70 = digs56loc%8;
+        String bb = String.format("byte %3d bit %2d", byte70, bit70);
+        return bb;
     }
 
     public void group50(int digs34, int digs567)
